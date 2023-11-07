@@ -1,3 +1,4 @@
+// links to Home, About pages
 const NavBar = () => {
   return (
     <div>
