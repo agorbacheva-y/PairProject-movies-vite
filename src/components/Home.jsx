@@ -15,7 +15,6 @@ const Home = () => {
       const response = await fetch(movieListUrl);
       const data = await response.json();
       //console.log(data);
-
       setMovies(data.results);
     } catch (error) {
       console.log(error.response.status);
