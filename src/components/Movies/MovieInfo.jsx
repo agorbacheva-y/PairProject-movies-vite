@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "./Movies.css";
 
 const MovieInfo = () => {
   // params is the movie id
@@ -33,8 +34,15 @@ const MovieInfo = () => {
   },[]);
 
   return (
-    <div>
-      <img src={backdropPath + movieDetails?.backdrop_path} />
+    <div 
+      className="backdrop"
+      style={{
+        backgroundImage: `url(${backdropPath}${movieDetails?.backdrop_path})`
+      }}
+    >
+      {movieDetails?.title}
+      {movieDetails?.vote_average}
+      {movieDetails?.overview}
     </div>
   );
 };
