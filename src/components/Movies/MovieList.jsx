@@ -4,10 +4,10 @@ const MovieList = ({ movies }) => {
 
   return (
     <div>
-      {movies?.map(({ title, id, poster_path }) => {
+      {movies?.map(({ id, poster_path, title }) => {
         return (
           <Link
-            to={`/movie/${title.toLowerCase().replace(/ /g, "%20")}`}
+            to={`/movie/${id}`}
             key={id}
           >
             <img src={posterPath + poster_path} alt={title} />
