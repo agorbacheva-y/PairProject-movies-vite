@@ -1,6 +1,6 @@
 // business logic goes here
 import { useState, useEffect } from "react";
-import MovieList from "./Movies/MovieList";
+import MovieList from "./movies/MovieList";
 
 const Home = () => {
   // state to store movies
