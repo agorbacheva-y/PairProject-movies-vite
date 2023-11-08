@@ -16,7 +16,7 @@ const Home = () => {
       const data = await response.json();
       //console.log(data);
 
-      setMovies(data);
+      setMovies(data.results);
     } catch (error) {
       console.log(error.response.status);
     }
@@ -31,10 +31,8 @@ const Home = () => {
   },[movies])
 
   return (
-    // fetch data
-    // store data in state
     <div>
-      <MovieList />
+      <MovieList movies={movies} />
     </div>
   );
 };
