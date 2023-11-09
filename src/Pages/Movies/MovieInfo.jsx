@@ -1,5 +1,5 @@
 // fetch movie details
-// useParams
+// useParams - we use movieId to get a unique id for the movie we need to fetch
 
 const MovieInfo = () => {
   const backdropPath = "https://image.tmdb.org/t/p/w1280";

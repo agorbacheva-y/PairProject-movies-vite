@@ -1,8 +1,8 @@
 // business logic goes here
 import { useState, useEffect } from "react";
-import MovieList from "./movies/MovieList";
+import MovieList from "./MovieList";
 
-const Home = () => {
+const Movies = () => {
   // state to store movies
   const [ movies, setMovies ] = useState(null);
 
@@ -37,4 +37,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Movies;

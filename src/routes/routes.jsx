@@ -1,15 +1,42 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "../components/Home";
-import About from "../components/About";
-import NotFound from "../components/NotFound";
-import MovieInfo from "../components/Movies/MovieInfo";
+import Movies from "../Pages/Movies";
+import About from "../Pages/About";
+import NotFound from "../Pages/NotFound";
+import MovieInfo from "../Pages/Movies/MovieInfo";
+
+export const appPages = [
+  {
+    name: "Home",
+    component: Movies,
+    menus: ["header", "footer"],
+    path: '/'
+  },
+  {
+    name: "About",
+    component: About,
+    menus: ["footer"],
+    path: '/about'
+  },
+  {
+    name: "Movie info",
+    component: MovieInfo,
+    menus: [],
+    path: "/movie/:movieId"
+  },
+  {
+    name: "Not Found",
+    component: NotFound,
+    menus: [],
+    path: "*"
+  },
+]
+
 
 const routes = (
   <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/about" element={<About />} />
-    <Route path="*" element={<NotFound />} />
-    <Route path="/movie/:movieTitle" element={<MovieInfo/>} />
+    {appPages.map((page, index) => (
+      <Route key={index} path={page.path} element={<page.component />} />
+    ))}
   </Routes>
 );
 

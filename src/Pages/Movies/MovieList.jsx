@@ -7,7 +7,7 @@ const MovieList = ({ movies }) => {
       {movies?.map(({ title, id, poster_path }) => {
         return (
           <Link
-            to={`/movie/${title.toLowerCase().replace(/ /g, "%20")}`}
+            to={`/movie/${id}`}
             key={id}
           >
             <img src={posterPath + poster_path} alt={title} />
