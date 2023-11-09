@@ -1,15 +1,13 @@
-// fetch movie details
-// useParams - we use movieId to get a unique id for the movie we need to fetch
-
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import NotFound from "../NotFound";
 import "./Movies.css";
 
 const MovieInfo = () => {
   // use movie id as params
   const { movieId } = useParams();
 
-  // useNavigate hook to go back one pg
+  // useNavigate hook to go home
   const navigate = useNavigate();
 
   // state to store movie details 
@@ -41,27 +39,31 @@ const MovieInfo = () => {
   },[]);
 
   return (
-    <div
-      className="container"
-      style={{
-        backgroundImage: `url(${backdropPath}${movieDetails?.backdrop_path})`
-      }}
-
-    >
-      <button onClick={() => navigate(-1)}>Home</button>
-      <div className="movieInfo">
-        <div className="movieTitle">
-          {movieDetails?.title}
+    <>
+      {/* {notFound ? (
+        <NotFound />
+      ) : ( */}
+        <div
+          className="container"
+          style={{
+            backgroundImage: `url(${backdropPath}${movieDetails?.backdrop_path})`
+          }}
+        >
+          <button onClick={() => navigate('/')}>Home</button>
+          <div className="movieInfo">
+            <div className="movieTitle">
+              {movieDetails?.title}
+            </div>
+            <div className="movieRating">
+              {movieDetails?.vote_average}
+            </div>
+            <div className="movieOverview">
+              {movieDetails?.overview}
+            </div>
+          </div>
         </div>
-        <div className="movieRating">
-          {movieDetails?.vote_average}
-        </div>
-        <div className="movieOverview">
-          {movieDetails?.overview}
-        </div>
-      </div>
-      
-    </div>
+    {/* )} */}
+    </>
   );
 };
 
