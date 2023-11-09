@@ -1,12 +1,11 @@
 // business logic goes here
 import { useState, useEffect } from "react";
-import MovieList from "./movies/MovieList";
+import MovieList from "./MovieList";
 
-const Home = () => {
-  // state to store list of movies
+const Movies = () => {
+  // state to store movies
   const [ movies, setMovies ] = useState(null);
 
-  // api call + key
   const apiKey = "91bf6de032d334f6beb79054dab13a5f";
   const movieListUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
 
@@ -16,16 +15,20 @@ const Home = () => {
       const response = await fetch(movieListUrl);
       const data = await response.json();
       //console.log(data);
+
       setMovies(data.results);
     } catch (error) {
       console.log(error.response.status);
     }
   };
 
-  // call function when component mounts
   useEffect(() => {
     fetchMovies();
   },[])
+
+  useEffect(() => {
+    console.log("movies:", movies);
+  },[movies])
 
   return (
     <div>
@@ -34,4 +37,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Movies;

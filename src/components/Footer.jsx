@@ -1,14 +1,12 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 import { appPages } from '../routes/routes'
-import './navBar.css'
-// links to Home, About pages
 
-const NavBar = () => {
+const Footer = () => {
   return (
-    <nav className='headerMenu'>
+    <nav className="footer">
       <ul>
         {appPages.map((page, index) => (
-          page.menus.includes('header') && (
+          page.menus.includes('footer') && (
             <li key={index}>
               <NavLink to={page.path}>{page.name}</NavLink>
             </li>
@@ -19,4 +17,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Footer;
