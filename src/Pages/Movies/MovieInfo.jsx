@@ -2,12 +2,15 @@
 // useParams - we use movieId to get a unique id for the movie we need to fetch
 
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "./Movies.css";
 
 const MovieInfo = () => {
   // use movie id as params
   const { movieId } = useParams();
+
+  // useNavigate hook to go back one pg
+  const navigate = useNavigate();
 
   // state to store movie details 
   const [ movieDetails, setMovieDetails ] = useState();
@@ -45,9 +48,13 @@ const MovieInfo = () => {
       }}
 
     >
-      {movieDetails?.title}
-      {movieDetails?.vote_average}
-      {movieDetails?.overview}
+      <button onClick={() => navigate(-1)}>Go Back</button>
+      <div>
+        {movieDetails?.title}
+        {movieDetails?.vote_average}
+        {movieDetails?.overview}
+      </div>
+      
     </div>
   );
 };
