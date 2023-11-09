@@ -42,17 +42,23 @@ const MovieInfo = () => {
 
   return (
     <div
-      className="backdrop"
+      className="container"
       style={{
         backgroundImage: `url(${backdropPath}${movieDetails?.backdrop_path})`
       }}
 
     >
-      <button onClick={() => navigate(-1)}>Go Back</button>
-      <div>
-        {movieDetails?.title}
-        {movieDetails?.vote_average}
-        {movieDetails?.overview}
+      <button onClick={() => navigate(-1)}>Home</button>
+      <div className="movieInfo">
+        <div className="movieTitle">
+          {movieDetails?.title}
+        </div>
+        <div className="movieRating">
+          {movieDetails?.vote_average}
+        </div>
+        <div className="movieOverview">
+          {movieDetails?.overview}
+        </div>
       </div>
       
     </div>
