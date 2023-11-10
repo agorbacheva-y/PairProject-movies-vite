@@ -15,29 +15,47 @@ button {
 }
 
 .homeBtn {
-  width: 70px;
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  margin: 25px;
+  width: 75px;
   font-size: 1rem;
   color: white;
   background-color: transparent;
+  position: fixed;
+  top: 5%;
+}
+
+.movieInfoContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .movieInfo {
-  width: 20rem;
+  width: 25%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: white;
-  margin: 50px;
+  gap: 10px;
+}
+
+.movieInfo i {
+  margin-right: 5px;
 }
 
 .movieTitle {
   font-weight: bold;
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.movieBackdrop {
+  width: 60%;
+  height: 60%;
+}
+
+.movieBackdrop >img {
+  width: 100%;
 }
 
 .notFound {

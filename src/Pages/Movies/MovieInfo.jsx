@@ -53,25 +53,27 @@ const MovieInfo = () => {
         <NotFound />
       ) : (
         <div
-          className="container"
-          style={{
-            backgroundImage: `url(${backdropPath}${movieDetails?.backdrop_path})`
-          }}
+          className="movieInfoContainer"
         >
-          <button className="homeBtn" onClick={() => navigate(-1) }>
-            <i class="fa-solid fa-chevron-left"></i>
-            <span>Home</span>
-          </button>
           <div className="movieInfo">
+            <button className="homeBtn" onClick={() => navigate(-1) }>
+              <i className="fa-solid fa-chevron-left"></i>
+              <span>Home</span>
+            </button>
             <div className="movieTitle">
               {movieDetails?.title}
             </div>
             <div className="movieRating">
-              {movieDetails?.vote_average}
+              <i className="fa-solid fa-star"></i>
+              <span>{movieDetails?.vote_average}</span>
             </div>
             <div className="movieOverview">
               {movieDetails?.overview}
             </div>
+          </div>
+
+          <div className="movieBackdrop">
+            <img src={`${backdropPath}${movieDetails?.backdrop_path}`} />
           </div>
         </div>
       )} 
