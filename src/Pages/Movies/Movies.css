@@ -5,12 +5,24 @@
   background-position: center;
   background-size: cover;
   display: flex;
+  flex-direction: column;
 }
 
 button {
   cursor: pointer;
   padding: 7px;
   border-radius: 10px;
+}
+
+.homeBtn {
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 25px;
+  font-size: 1rem;
+  color: white;
+  background-color: transparent;
 }
 
 .movieInfo {
