@@ -9,8 +9,8 @@
 
 button {
   cursor: pointer;
-  position: fixed;
-  margin: 25px;
+  padding: 7px;
+  border-radius: 10px;
 }
 
 .movieInfo {
@@ -26,4 +26,13 @@ button {
   font-weight: bold;
   font-size: 3rem;
   margin-bottom: 10px;
+}
+
+.notFound {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15% auto;
+  gap: 20px;
 }
