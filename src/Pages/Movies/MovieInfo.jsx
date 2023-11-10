@@ -1,14 +1,11 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import NotFound from "../NotFound";
 import "./Movies.css";
 
 const MovieInfo = () => {
   // use movie id as params
   const { movieId } = useParams();
-
-  // useNavigate hook to go home
-  const navigate = useNavigate();
 
   // state to store movie details 
   const [ movieDetails, setMovieDetails ] = useState(null);
@@ -57,7 +54,6 @@ const MovieInfo = () => {
             backgroundImage: `url(${backdropPath}${movieDetails?.backdrop_path})`
           }}
         >
-          <button onClick={() => navigate('/')}>Home</button>
           <div className="movieInfo">
             <div className="movieTitle">
               {movieDetails?.title}
