@@ -48,3 +48,11 @@ button {
   margin: 15% auto;
   gap: 20px;
 }
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30% auto;
+}

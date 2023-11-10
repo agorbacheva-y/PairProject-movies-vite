@@ -1,7 +1,8 @@
 const Loading = () => {
   return (
-    <div>
-      Loading movies...
+    <div className="loading">
+      <i class="fa-solid fa-spinner fa-spin"></i>
+      <span>Loading movies...</span>
     </div>
   );
 };
