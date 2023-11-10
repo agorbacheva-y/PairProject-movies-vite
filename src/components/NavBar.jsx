@@ -5,19 +5,22 @@ import './navBar.css'
 
 const NavBar = () => {
   // useNavigate for home btn
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   return (
     <nav className='headerMenu'>
-      <button className="homeBtn" onClick={() => navigate(-1) }>
+      {/* <button className="homeBtn" onClick={() => navigate(-1) }>
         <i className="fa-solid fa-chevron-left"></i>
         <span>Home</span>
-      </button>
+      </button> */}
       <ul>
         {appPages.map((page, index) => (
           page.menus.includes('header') && (
             <li key={index}>
-              <NavLink to={page.path}>{page.name}</NavLink>
+              <NavLink to={page.path}>
+                <i className="fa-solid fa-chevron-left"></i>
+                {page.name}
+              </NavLink>
             </li>
           )
         ))}
