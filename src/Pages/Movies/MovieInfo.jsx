@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import NotFound from "../NotFound";
 import "./Movies.css";
-
 
 const MovieInfo = () => {
   // use movie id as params
@@ -13,9 +12,6 @@ const MovieInfo = () => {
 
   // state to handle page not found error
   const [ notFound, setNotFound ] = useState(false);
-
-  // useNavigate for home btn
-  const navigate = useNavigate();
 
   // base url for backdrop size image
   const backdropPath = "https://image.tmdb.org/t/p/w1280";
@@ -52,14 +48,12 @@ const MovieInfo = () => {
       {notFound ? (
         <NotFound />
       ) : (
-        <div
-          className="movieInfoContainer"
-        >
+        <div className="movieInfoContainer">
+          <div className="movieBackdrop">
+            <img src={`${backdropPath}${movieDetails?.backdrop_path}`} />
+          </div>
+
           <div className="movieInfo">
-            <button className="homeBtn" onClick={() => navigate(-1) }>
-              <i className="fa-solid fa-chevron-left"></i>
-              <span>Home</span>
-            </button>
             <div className="movieTitle">
               {movieDetails?.title}
             </div>
@@ -70,10 +64,6 @@ const MovieInfo = () => {
             <div className="movieOverview">
               {movieDetails?.overview}
             </div>
-          </div>
-
-          <div className="movieBackdrop">
-            <img src={`${backdropPath}${movieDetails?.backdrop_path}`} />
           </div>
         </div>
       )} 

@@ -1,3 +1,15 @@
 .headerMenu a.active {
   font-weight: 600;
 }
+
+.homeBtn {
+  width: 80px;
+  font-size: 1rem;
+  color: white;
+  background-color: transparent;
+  margin: 10px;
+}
+
+.homeBtn >i {
+  margin-right: 5px;
+}
