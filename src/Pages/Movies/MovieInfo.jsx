@@ -11,7 +11,10 @@ const MovieInfo = () => {
   const navigate = useNavigate();
 
   // state to store movie details 
-  const [ movieDetails, setMovieDetails ] = useState();
+  const [ movieDetails, setMovieDetails ] = useState(null);
+
+  // state to handle page not found error
+  const [ notFound, setNotFound ] = useState(false);
 
   // base url for backdrop size image
   const backdropPath = "https://image.tmdb.org/t/p/w1280";
@@ -27,7 +30,12 @@ const MovieInfo = () => {
       const response = await fetch(movieDetailUrl);
       const data = await response.json();
       console.log(data);
-      setMovieDetails(data);
+
+      if (!response.ok) {
+        setNotFound(true);
+      } else {
+        setMovieDetails(data);
+      }
     } catch (error) {
       console.log(error.response.status)
     }
@@ -40,9 +48,9 @@ const MovieInfo = () => {
 
   return (
     <>
-      {/* {notFound ? (
+      {notFound ? (
         <NotFound />
-      ) : ( */}
+      ) : (
         <div
           className="container"
           style={{
@@ -62,7 +70,7 @@ const MovieInfo = () => {
             </div>
           </div>
         </div>
-    {/* )} */}
+      )} 
     </>
   );
 };
