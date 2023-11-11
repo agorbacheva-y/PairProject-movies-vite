@@ -17,7 +17,7 @@ const NavBar = () => {
         {appPages.map((page, index) => (
           page.menus.includes('header') && (
             <li key={index}>
-              <NavLink to={page.path}>
+              <NavLink to={page.path} className="headerLink">
                 <i className="fa-solid fa-chevron-left"></i>
                 {page.name}
               </NavLink>

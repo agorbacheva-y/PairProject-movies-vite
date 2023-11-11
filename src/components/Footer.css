@@ -1,0 +1,17 @@
+.footer {
+  margin: 5% 10%;
+}
+
+.footer li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.footerLink {
+  text-decoration: none;
+  color: white;
+}
+
+.footerLink:hover {
+  color: rgba(245, 220, 40, 1);
+}
