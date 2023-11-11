@@ -8,7 +8,7 @@ const NavBar = () => {
     <nav className='headerMenu'>
       <ul>
         {appPages.map((page, index) => (
-          page.menus.includes('header') && (
+          page.menus.includes('header') && !isActive &&(
             <li key={index}>
               <NavLink to={page.path}>{page.name}</NavLink>
             </li>
