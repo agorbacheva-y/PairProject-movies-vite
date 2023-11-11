@@ -14,6 +14,7 @@ button {
   border-radius: 10px;
 }
 
+/* MovieInfo.jsx */
 .movieInfoContainer {
   width: 100%;
   height: 100vh;
@@ -44,6 +45,10 @@ button {
   line-height: 2rem;
 }
 
+.fa-star {
+  color:rgba(245, 220, 40, 1);
+}
+
 .movieBackdrop {
   width: 80%;
 }
@@ -53,6 +58,7 @@ button {
   height: 100%;
 }
 
+/* NotFound.jsx */
 .notFound {
   color: white;
   display: flex;
@@ -62,6 +68,7 @@ button {
   gap: 20px;
 }
 
+/* Loading.jsx */
 .loading {
   display: flex;
   flex-direction: column;
@@ -101,8 +108,4 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-}
-
-.posterRating >i {
-  margin-right: 5px;
 }

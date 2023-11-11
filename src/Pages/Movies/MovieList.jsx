@@ -15,10 +15,6 @@ const MovieList = ({ movies }) => {
               <img src={posterPath + poster_path} alt={title} />
               <div className="posterInfo">
                 <p>{title}</p>
-                <div className="posterRating">
-                  <i className="fa-solid fa-star"></i>
-                  <span>{vote_average}</span>
-                </div>
               </div>
               
             </Link>
