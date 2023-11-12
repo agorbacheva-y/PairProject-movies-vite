@@ -6,9 +6,10 @@
 
 # Movie Site Project
 
-Replace this readme with your own information about your project.
+Pair Project
+Michael Holm and Ayumi Gorbacheva-Yamamoto
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to build a multi-page React application by creating a movie site using The Movie Database API.
 
 ## Getting Started with the Project
 
@@ -24,7 +25,9 @@ npm i && code . && npm run dev
 
 ### The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The project was initially started with Preeti Vadali, but she unfortunately had to drop out of the project. Preeti and Ayumi started by creating an initial structure together which Michael then refactored for better efficiency and dynamic routing.
+
+We used React Router Dom which we learned about this week and the along with the included hooks such as useParams and useNavigate. We also continued to build on the hooks we learned in previous weeks by using state and useEffect throughout the application.
 
 ### View it live
 
