@@ -1,0 +1,31 @@
+.genreTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Adds space between each tag */
+  justify-content: center; /* Horizontally centers the tags */
+  align-items: center; /* Vertically centers the tags (if needed) */
+  padding: 10px;
+}
+
+.genreTag {
+  background-color: #333; /* Dark grey background */
+  color: #ddd; /* Light grey text color */
+  padding: 5px 10px; /* Padding: 5px top & bottom, 10px left & right */
+  border-radius: 15px; /* Rounded corners */
+  text-decoration: none; /* Removes underline from links */
+  font-size: 0.9em; /* Slightly smaller font size */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.genreTag.active {
+  background-color: #666;
+  color: #fff;
+  font-weight: 600;
+
+}
+
+.genreTag:hover {
+  background-color: #444; /* Slightly lighter grey on hover */
+  color: #fff; /* Brighter text color on hover */
+  text-decoration: none; /* Ensures that the underline does not reappear on hover */
+}

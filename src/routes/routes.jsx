@@ -3,6 +3,7 @@ import Movies from "../Pages/Movies/Index";
 import About from "../Pages/About";
 import NotFound from "../Pages/NotFound";
 import MovieInfo from "../Pages/Movies/MovieInfo";
+import Genre from "../Pages/Movies/Genre";
 
 export const appPages = [
   {
@@ -22,6 +23,12 @@ export const appPages = [
     component: MovieInfo,
     menus: [],
     path: "/movie/:movieId"
+  },
+  {
+    name: "Movie Categories",
+    component: Genre,
+    menus: [],
+    path: "/genre/:genreId"
   },
   {
     name: "Not Found",
