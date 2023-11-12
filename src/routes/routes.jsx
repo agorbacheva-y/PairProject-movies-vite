@@ -24,6 +24,12 @@ export const appPages = [
     path: "/movie/:movieId"
   },
   {
+    name: "Movie Categories",
+    component: Movies,
+    menus: [],
+    path: "/category/:movieCategory"
+  },
+  {
     name: "Not Found",
     component: NotFound,
     menus: [],

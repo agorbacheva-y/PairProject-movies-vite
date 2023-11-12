@@ -16,7 +16,6 @@ const MovieList = ({ movies }) => {
               <div className="posterInfo">
                 <p>{title}</p>
               </div>
-              
             </Link>
           </div>
         );

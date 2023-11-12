@@ -1,6 +1,7 @@
 // business logic goes here
 import { useState, useEffect } from "react";
 import MovieList from "./MovieList";
+import { GenreTags } from "../../components/GenreTags";
 import Loading from "../Loading";
 
 const Movies = () => {
@@ -40,6 +41,7 @@ const Movies = () => {
         <Loading />
       ) : (
         <div>
+          <GenreTags />
           <MovieList movies={movies} />
         </div>
       )}
