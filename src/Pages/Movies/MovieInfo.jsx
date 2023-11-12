@@ -26,8 +26,6 @@ const MovieInfo = () => {
     try {
       const response = await fetch(movieDetailUrl);
       const data = await response.json();
-      console.log(data);
-
       if (!response.ok) {
         setNotFound(true);
       } else {

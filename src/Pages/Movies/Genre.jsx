@@ -1,4 +1,3 @@
-// business logic goes here
 import { useState, useEffect } from "react";
 import MovieList from "./MovieList";
 import { GenreTags } from "../../components/GenreTags";
@@ -23,7 +22,6 @@ const Genre = () => {
     try {
       const response = await fetch(movieListUrl);
       const data = await response.json();
-      //console.log(data);
       setMovies(data.results);
       setIsLoading(false);
     } catch (error) {
