@@ -6,9 +6,7 @@ import routes from "./routes/routes";
 export const App = () => {
   return (
     <BrowserRouter>
-      <NavBar />
       {routes}
-      <Footer />
     </BrowserRouter>
   );
 };

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import NotFound from "../NotFound";
+import NavBar from "../../components/NavBar";
 import "./Movies.css";
 
 const MovieInfo = () => {
@@ -46,6 +47,8 @@ const MovieInfo = () => {
       {notFound ? (
         <NotFound />
       ) : (
+        <>
+        <NavBar />
         <div className="movieInfoContainer">
           <div className="movieBackdrop">
             <img src={`${backdropPath}${movieDetails?.backdrop_path}`} />
@@ -65,7 +68,8 @@ const MovieInfo = () => {
             <div className="movieOverview">{movieDetails?.overview}</div>
           </div>
         </div>
-      )}
+        </>
+      )} 
     </>
   );
 };

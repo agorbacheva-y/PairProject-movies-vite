@@ -35,6 +35,7 @@ const Movies = () => {
     console.log("movies:", movies);
   }, [movies]);
 
+  console.log('latest version')
   return (
     <>
       {isLoading ? (

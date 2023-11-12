@@ -1,9 +1,13 @@
 .headerMenu {
-  margin: 5%;
+  margin: 10px 10%;
 }
 
 .headerMenu a.active {
   font-weight: 600;
+}
+
+.headerMenu ul {
+  list-style-type: none;
 }
 
 .headerLink {
