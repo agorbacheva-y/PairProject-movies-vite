@@ -31,7 +31,9 @@ We used React Router Dom which we learned about this week and the along with the
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+<a href="https://technigo-wk7-movie-site.netlify.app/">
+  Deployed site
+</a>
 
 ## Instructions
 
