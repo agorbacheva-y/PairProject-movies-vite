@@ -55,7 +55,7 @@ const MovieInfo = () => {
 
           <div className="movieInfo">
             <div className="movieTitle">
-              {movieDetails?.title}
+              <p>{movieDetails?.title} ({movieDetails?.release_date.substring(0, 4)})</p>
             </div>
             <div className="movieRating">
               <i className="fa-solid fa-star"></i>

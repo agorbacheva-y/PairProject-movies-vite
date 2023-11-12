@@ -1,5 +1,7 @@
 .footer {
   margin: 5% 10%;
+  display: flex;
+  justify-content: center;
 }
 
 .footer li {
