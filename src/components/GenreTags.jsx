@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { useEffect, useState } from "react";
 import './GenreTags.css'
 
@@ -32,7 +32,7 @@ export const GenreTags = () => {
         <span>Loading...</span>
       ) : (
           genres.map((genre) => (
-            <Link className="genreTag" key={genre.id} to={`/genre/${genre.id}`}>{genre.name}</Link>
+            <NavLink className="genreTag" key={genre.id} to={`/genre/${genre.id}`}>{genre.name}</NavLink>
           ))
       )}
     </div>

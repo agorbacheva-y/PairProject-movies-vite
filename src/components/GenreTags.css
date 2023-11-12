@@ -17,6 +17,13 @@
   transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
+.genreTag.active {
+  background-color: #666;
+  color: #fff;
+  font-weight: 600;
+
+}
+
 .genreTag:hover {
   background-color: #444; /* Slightly lighter grey on hover */
   color: #fff; /* Brighter text color on hover */
