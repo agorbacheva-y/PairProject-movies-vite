@@ -7,11 +7,11 @@ const MovieInfo = () => {
   // use movie id as params
   const { movieId } = useParams();
 
-  // state to store movie details 
-  const [ movieDetails, setMovieDetails ] = useState(null);
+  // state to store movie details
+  const [movieDetails, setMovieDetails] = useState(null);
 
   // state to handle page not found error
-  const [ notFound, setNotFound ] = useState(false);
+  const [notFound, setNotFound] = useState(false);
 
   // base url for backdrop size image
   const backdropPath = "https://image.tmdb.org/t/p/w1280";
@@ -32,14 +32,14 @@ const MovieInfo = () => {
         setMovieDetails(data);
       }
     } catch (error) {
-      console.log(error.response.status)
+      console.log(error.response.status);
     }
   };
 
   // call function when component mounts
   useEffect(() => {
     fetchMovieDetails();
-  },[]);
+  }, []);
 
   return (
     <>
@@ -53,18 +53,19 @@ const MovieInfo = () => {
 
           <div className="movieInfo">
             <div className="movieTitle">
-              <p>{movieDetails?.title} ({movieDetails?.release_date.substring(0, 4)})</p>
+              <p>
+                {movieDetails?.title} (
+                {movieDetails?.release_date.substring(0, 4)})
+              </p>
             </div>
             <div className="movieRating">
               <i className="fa-solid fa-star"></i>
               <span>{movieDetails?.vote_average.toFixed(1)}</span>
             </div>
-            <div className="movieOverview">
-              {movieDetails?.overview}
-            </div>
+            <div className="movieOverview">{movieDetails?.overview}</div>
           </div>
         </div>
-      )} 
+      )}
     </>
   );
 };

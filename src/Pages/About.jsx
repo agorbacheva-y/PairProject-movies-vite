@@ -17,7 +17,8 @@ const About = () => {
         <p>
           Photo by{" "}
           <a href="https://unsplash.com/@fkaregan?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
-            {" "}Samuel Regan-Asante
+            {" "}
+            Samuel Regan-Asante
           </a>{" "}
           on{" "}
           <a href="https://unsplash.com/photos/the-walking-dead-dvd-movie-wMkaMXTJjlQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">

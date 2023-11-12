@@ -8,10 +8,7 @@ const MovieList = ({ movies }) => {
       {movies?.map(({ id, poster_path, title, vote_average }) => {
         return (
           <div className="moviePoster" key={id}>
-            <Link
-              to={`/movie/${id}`}
-              className="posterLink"
-            >
+            <Link to={`/movie/${id}`} className="posterLink">
               <img src={posterPath + poster_path} alt={title} />
               <div className="posterInfo">
                 <p>{title}</p>
