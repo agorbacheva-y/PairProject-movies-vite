@@ -57,7 +57,7 @@ const MovieInfo = () => {
             </div>
             <div className="movieRating">
               <i className="fa-solid fa-star"></i>
-              <span>{movieDetails?.vote_average}</span>
+              <span>{movieDetails?.vote_average.toFixed(1)}</span>
             </div>
             <div className="movieOverview">
               {movieDetails?.overview}
