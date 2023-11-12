@@ -29,3 +29,24 @@
   color: #fff; /* Brighter text color on hover */
   text-decoration: none; /* Ensures that the underline does not reappear on hover */
 }
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 600px) {
+  .burger-menu {
+    display: block;
+  }
+
+  .genreTags {
+    display: none; 
+  }
+
+  .genreTags.open {
+    display: flex;
+  }
+}
