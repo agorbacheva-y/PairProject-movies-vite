@@ -14,16 +14,21 @@ const NavBar = () => {
         <span>Home</span>
       </button> */}
       <ul>
-        {appPages.map((page, index) => (
-          page.menus.includes('header') && !isActive &&(
-            <li key={index}>
-              <NavLink to={page.path} className="headerLink">
-                <i className="fa-solid fa-chevron-left"></i>
-                {page.name}
-              </NavLink>
-            </li>
+        {appPages.map((page, index) => {
+          if (location.pathname === page.path) {
+            return null;
+          }
+          return (
+            page.menus.includes('header') && (
+              <li key={index}>
+                <NavLink to={page.path} className="headerLink">
+                  <i className="fa-solid fa-chevron-left"></i>
+                  {page.name}
+                </NavLink>
+              </li>
+            )
           )
-        ))}
+        })}
       </ul>
     </nav>
   );
