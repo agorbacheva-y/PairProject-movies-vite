@@ -8,7 +8,7 @@ export const appPages = [
   {
     name: "Home",
     component: Movies,
-    menus: ["footer"],
+    menus: ["header", "footer"],
     path: '/'
   },
   {

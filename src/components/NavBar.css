@@ -1,3 +1,32 @@
+.headerMenu {
+  margin: 5% 10%;
+}
+
 .headerMenu a.active {
   font-weight: 600;
+}
+
+.headerLink {
+  text-decoration: none;
+  color: white;
+}
+
+.headerLink >i {
+  margin-right: 5px;
+}
+
+.headerLink:hover {
+  color: rgba(245, 220, 40, 1);
+}
+
+.homeBtn {
+  width: 80px;
+  font-size: 1rem;
+  color: white;
+  background-color: transparent;
+  margin: 10px;
+}
+
+.homeBtn >i {
+  margin-right: 5px;
 }

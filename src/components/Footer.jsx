@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
-import { appPages } from '../routes/routes'
+import { appPages } from '../routes/routes';
+import "./Footer.css";
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
         {appPages.map((page, index) => (
           page.menus.includes('footer') && (
             <li key={index}>
-              <NavLink to={page.path}>{page.name}</NavLink>
+              <NavLink to={page.path} className="footerLink" >{page.name}</NavLink>
             </li>
           )
         ))}

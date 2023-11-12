@@ -4,15 +4,21 @@ const MovieList = ({ movies }) => {
   const posterPath = `https://image.tmdb.org/t/p/w185`;
 
   return (
-    <div>
-      {movies?.map(({ id, poster_path, title }) => {
+    <div className="movieList">
+      {movies?.map(({ id, poster_path, title, vote_average }) => {
         return (
-          <Link
-            to={`/movie/${id}`}
-            key={id}
-          >
-            <img src={posterPath + poster_path} alt={title} />
-          </Link>
+          <div className="moviePoster" key={id}>
+            <Link
+              to={`/movie/${id}`}
+              className="posterLink"
+            >
+              <img src={posterPath + poster_path} alt={title} />
+              <div className="posterInfo">
+                <p>{title}</p>
+              </div>
+              
+            </Link>
+          </div>
         );
       })}
     </div>

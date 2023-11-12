@@ -1,19 +1,17 @@
-// fetch movie details
-// useParams - we use movieId to get a unique id for the movie we need to fetch
-
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import NotFound from "../NotFound";
 import "./Movies.css";
 
 const MovieInfo = () => {
   // use movie id as params
   const { movieId } = useParams();
 
-  // useNavigate hook to go back one pg
-  const navigate = useNavigate();
-
   // state to store movie details 
-  const [ movieDetails, setMovieDetails ] = useState();
+  const [ movieDetails, setMovieDetails ] = useState(null);
+
+  // state to handle page not found error
+  const [ notFound, setNotFound ] = useState(false);
 
   // base url for backdrop size image
   const backdropPath = "https://image.tmdb.org/t/p/w1280";
@@ -29,7 +27,12 @@ const MovieInfo = () => {
       const response = await fetch(movieDetailUrl);
       const data = await response.json();
       console.log(data);
-      setMovieDetails(data);
+
+      if (!response.ok) {
+        setNotFound(true);
+      } else {
+        setMovieDetails(data);
+      }
     } catch (error) {
       console.log(error.response.status)
     }
@@ -41,27 +44,30 @@ const MovieInfo = () => {
   },[]);
 
   return (
-    <div
-      className="container"
-      style={{
-        backgroundImage: `url(${backdropPath}${movieDetails?.backdrop_path})`
-      }}
+    <>
+      {notFound ? (
+        <NotFound />
+      ) : (
+        <div className="movieInfoContainer">
+          <div className="movieBackdrop">
+            <img src={`${backdropPath}${movieDetails?.backdrop_path}`} />
+          </div>
 
-    >
-      <button onClick={() => navigate(-1)}>Home</button>
-      <div className="movieInfo">
-        <div className="movieTitle">
-          {movieDetails?.title}
+          <div className="movieInfo">
+            <div className="movieTitle">
+              {movieDetails?.title}
+            </div>
+            <div className="movieRating">
+              <i className="fa-solid fa-star"></i>
+              <span>{movieDetails?.vote_average}</span>
+            </div>
+            <div className="movieOverview">
+              {movieDetails?.overview}
+            </div>
+          </div>
         </div>
-        <div className="movieRating">
-          {movieDetails?.vote_average}
-        </div>
-        <div className="movieOverview">
-          {movieDetails?.overview}
-        </div>
-      </div>
-      
-    </div>
+      )} 
+    </>
   );
 };
 
