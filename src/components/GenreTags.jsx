@@ -46,7 +46,7 @@ export const GenreTags = () => {
        <BurgerMenuIcon />
       </div>
       <div className={`genreTags ${isOpen ? 'open' : ''}`}>
-       <NavLink className="genreTag" to="/">Home</NavLink>
+       <NavLink className="genreTag" to="/">&lt; Home</NavLink>
         {isLoading ? (
           <span>Loading...</span>
         ) : (
