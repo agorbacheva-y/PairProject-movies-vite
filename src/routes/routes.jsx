@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Movies from "../Pages/Movies";
+import Movies from "../Pages/Movies/Index";
 import About from "../Pages/About";
 import NotFound from "../Pages/NotFound";
 import MovieInfo from "../Pages/Movies/MovieInfo";
