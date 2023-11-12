@@ -1,6 +1,6 @@
 import { NavLink, useNavigate } from 'react-router-dom'
 import { appPages } from '../routes/routes'
-import './navBar.css'
+import "./NavBar.css";
 // links to Home, About pages
 
 const NavBar = () => {
