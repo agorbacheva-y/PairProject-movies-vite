@@ -6,10 +6,10 @@ import Loading from "../Loading";
 
 const Movies = () => {
   // state to store movies
-  const [ movies, setMovies ] = useState(null);
+  const [movies, setMovies] = useState(null);
 
   // state to store loading state
-  const [ isLoading, setIsLoading ] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   const apiKey = "91bf6de032d334f6beb79054dab13a5f";
   const movieListUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
@@ -29,11 +29,11 @@ const Movies = () => {
 
   useEffect(() => {
     fetchMovies();
-  },[])
+  }, []);
 
   useEffect(() => {
     console.log("movies:", movies);
-  },[movies])
+  }, [movies]);
 
   console.log('latest version')
   return (

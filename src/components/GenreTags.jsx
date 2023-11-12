@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import './GenreTags.css'
 
@@ -30,15 +30,14 @@ export const GenreTags = () => {
     } catch (error) {
       console.log(error.response.status);
     }
-  }
+  };
 
   useEffect(() => {
     const apiKey = "91bf6de032d334f6beb79054dab13a5f";
     const genreListUrl = `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=en-US`;
 
-    fetchGenre(genreListUrl)
-  },[])
-
+    fetchGenre(genreListUrl);
+  }, []);
 
   return (
     <div>
@@ -55,5 +54,5 @@ export const GenreTags = () => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};

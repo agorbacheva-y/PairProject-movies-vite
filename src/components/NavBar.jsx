@@ -1,25 +1,17 @@
-import { NavLink, useNavigate } from 'react-router-dom'
-import { appPages } from '../routes/routes'
+import { NavLink } from "react-router-dom";
+import { appPages } from "../routes/routes";
 import "./NavBar.css";
-// links to Home, About pages
 
 const NavBar = () => {
-  // useNavigate for home btn
-  //const navigate = useNavigate();
-
   return (
-    <nav className='headerMenu'>
-      {/* <button className="homeBtn" onClick={() => navigate(-1) }>
-        <i className="fa-solid fa-chevron-left"></i>
-        <span>Home</span>
-      </button> */}
+    <nav className="headerMenu">
       <ul>
         {appPages.map((page, index) => {
           if (location.pathname === page.path) {
             return null;
           }
           return (
-            page.menus.includes('header') && (
+            page.menus.includes("header") && (
               <li key={index}>
                 <NavLink to={page.path} className="headerLink">
                   <i className="fa-solid fa-chevron-left"></i>
@@ -27,7 +19,7 @@ const NavBar = () => {
                 </NavLink>
               </li>
             )
-          )
+          );
         })}
       </ul>
     </nav>

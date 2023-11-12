@@ -1,13 +1,3 @@
-.container {
-  width: 100%;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-}
-
 button {
   cursor: pointer;
   padding: 7px;
@@ -17,12 +7,10 @@ button {
 /* MovieInfo.jsx */
 .movieInfoContainer {
   width: 100%;
-  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 5%;
 }
 
 .movieInfoContainer i {
@@ -35,7 +23,7 @@ button {
   flex-direction: column;
   justify-content: center;
   color: white;
-  gap: 10px;
+  margin: 5%;
   line-height: 1.5rem;
 }
 
@@ -58,7 +46,22 @@ button {
   height: 100%;
 }
 
+.movieRating {
+  margin: 2% 0;
+}
+
 /* NotFound.jsx */
+.container {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .notFound {
   color: white;
   display: flex;
@@ -66,6 +69,7 @@ button {
   align-items: center;
   margin: 15% auto;
   gap: 20px;
+  text-align: center;
 }
 
 /* Loading.jsx */
@@ -83,6 +87,7 @@ button {
   width: 100%;
   flex-wrap: wrap;
   gap: 20px 5px;
+  justify-content: center;
 }
 
 .moviePoster {
@@ -108,4 +113,48 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+/* About pg */
+.aboutPg {
+  color: white;
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.aboutPg h1 {
+  margin: 10%;
+}
+
+.aboutImg {
+  width: 100%;
+  height: 30vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.aboutImg img {
+  width: 100%;
+  opacity: 50%;
+}
+
+.aboutPg p {
+  margin: 10% 0;
+  line-height: 1.5rem;
+}
+
+.attribute {
+  position: fixed;
+  bottom: 0;
+  font-size: 0.7rem;
+  color: grey;
+}
+
+.attribute a {
+  color: grey;
 }
